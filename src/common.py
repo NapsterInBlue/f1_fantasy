@@ -85,6 +85,17 @@ class Degenerate:
         self.this_weeks_drivers = []
         self.this_weeks_constructors = []
 
+    def __str__(self):
+        return (
+            "Constructors: "
+            + " ".join(self.this_weeks_constructors)
+            + "Drivers: "
+            + " ".join(self.this_weeks_drivers)
+        )
+
+    def __repr__(self):
+        return str(self)
+
 
 if __name__ == "__main__":
     dr = DriverRank({i: driver for (i, driver) in zip(range(1, 21), DRIVERS)})
