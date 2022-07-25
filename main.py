@@ -46,7 +46,7 @@ class DiamondDogs:
     def pretty_print(self):
         print("--- Weekend Picks ---")
         for degen in DEGENERATES:
-            print(self[degen])
+            print(degen + "\t" + str(self[degen]))
 
 
 if __name__ == "__main__":
