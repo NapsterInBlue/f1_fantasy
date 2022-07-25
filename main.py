@@ -1,6 +1,6 @@
 from src.ingest_data import load_constructor_ranks, load_driver_ranks, load_pick_orders
 from src.common import Degenerate, ConstructorRank, DriverRank, PickOrder, DEGENERATES
-from src.snake_draft import run_snake_draft
+from src.snake_draft import run_constructor_snake_draft, run_driver_snake_draft
 
 
 class DiamondDogs:
@@ -40,11 +40,19 @@ class DiamondDogs:
 
         return pick_order
 
+    def __getitem__(self, key: str):
+        return self.race_week[key]
+
+    def pretty_print(self):
+        print("--- Weekend Picks ---")
+        for degen in DEGENERATES:
+            print(self[degen])
+
 
 if __name__ == "__main__":
     dd = DiamondDogs()
-    print(dd.race_week)
-    print(dd.pick_order(driver_mode=True))
-    print(dd.pick_order(driver_mode=False))
 
-    run_snake_draft(dd, driver_mode=True)
+    run_driver_snake_draft(dd)
+    run_constructor_snake_draft(dd)
+
+    dd.pretty_print()

@@ -87,10 +87,9 @@ class Degenerate:
 
     def __str__(self):
         return (
-            "Constructors: "
-            + " ".join(self.this_weeks_constructors)
+            ("Constructors: " + " ".join(self.this_weeks_constructors).ljust(25))
             + "Drivers: "
-            + " ".join(self.this_weeks_drivers)
+            + ",   ".join(self.this_weeks_drivers)
         )
 
     def __repr__(self):
