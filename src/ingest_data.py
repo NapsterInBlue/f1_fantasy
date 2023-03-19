@@ -7,7 +7,7 @@ DATA = str(HERE.parent.parent)
 import pandas as pd
 
 from src.common import ConstructorRank, DriverRank, PickOrder
-from src.common import DEGENERATES
+from src.common import DEGENERATES, DRIVERS, CONSTRUCTORS
 
 
 def load_pick_orders():
@@ -22,11 +22,17 @@ def load_pick_orders():
 def load_driver_ranks() -> Dict[str, List[Tuple[int, str]]]:
     df = pd.read_csv(DATA + "/driver_ranks.csv")
 
+    for degenerate in df:
+        assert all(val in DRIVERS for val in sorted(df[degenerate].values))
+
     return df.to_dict()
 
 
 def load_constructor_ranks() -> Dict[str, List[Tuple[int, str]]]:
     df = pd.read_csv(DATA + "/constructor_ranks.csv")
+
+    for degenerate in df:
+        assert all(val in CONSTRUCTORS for val in df[degenerate].values)
 
     return df.to_dict()
 

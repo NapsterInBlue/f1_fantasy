@@ -1,28 +1,28 @@
 from typing import Dict, List
 
-DEGENERATES = ["Ann", "Brigoe", "Jay", "Matt", "Vero", "Nick"]
+DEGENERATES = ["Ann", "Brigoe", "Jay", "Matt", "Vero", "Nick", "Gabby"]
 
 DRIVERS = [
-    "Lewis Hamilton",
-    "George Russell",
-    "Max Verstappen",
-    "Sergio Perez",
-    "Charles Leclerc",
-    "Carlos Sainz",
-    "Daniel Ricciardo",
-    "Lando Norris",
-    "Fernando Alonso",
-    "Esteban Ocon",
-    "Pierre Gasly",
-    "Yuki Tsunoda",
-    "Sebastian Vettel",
-    "Lance Stroll",
-    "Nicholas Latifi",
     "Alex Albon",
-    "Valtteri Bottas",
-    "Zhou Guanyu",
+    "Carlos Sainz",
+    "Charles Leclerc",
+    "Esteban Ocon",
+    "Fernando Alonso",
+    "George Russell",
     "Kevin Magnussen",
-    "Mick Schumacher",
+    "Lance Stroll",
+    "Lando Norris",
+    "Lewis Hamilton",
+    "Logan Sargeant",
+    "Max Verstappen",
+    "Nico Hulkenberg",
+    "Nyck deVries",
+    "Oscar Piastri",
+    "Pierre Gasly",
+    "Sergio Perez",
+    "Valtteri Bottas",
+    "Yuki Tsunoda",
+    "Zhou Guanyu",
 ]
 
 CONSTRUCTORS = [
@@ -31,7 +31,7 @@ CONSTRUCTORS = [
     "Ferrari",
     "McLaren",
     "Alpine",
-    "AlphaTauri",
+    "Alpha Tauri",
     "Aston Martin",
     "Williams",
     "Alfa Romeo",

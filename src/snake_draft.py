@@ -11,7 +11,7 @@ def run_driver_snake_draft(degenerates: "DiamondDogs"):
     pick_order = degenerates.pick_order(driver_mode=True)
     reversed_pick_order = pick_order[::-1]
 
-    full_draft = pick_order + reversed_pick_order + pick_order
+    full_draft = pick_order + reversed_pick_order
 
     print("--- Driver Draft ---")
     for pick in full_draft:
